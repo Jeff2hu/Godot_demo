@@ -1,0 +1,523 @@
+[gd_scene load_steps=19 format=3 uid="uid://5nmh5bvmu542"]
+
+[ext_resource type="Texture2D" uid="uid://ywdcoscjqndc" path="res://assest/background/hall_bg.png" id="1_dhkur"]
+[ext_resource type="Script" path="res://script/hall/hallPage.gd" id="1_en4ui"]
+[ext_resource type="Texture2D" uid="uid://biwravx5odov6" path="res://assest/hall/personal_btn.png" id="2_gnqaw"]
+[ext_resource type="Texture2D" uid="uid://btb7y4orfls8a" path="res://assest/hall/hall_btn.png" id="3_jm50t"]
+[ext_resource type="Texture2D" uid="uid://w8hge4kaevw5" path="res://assest/hall/mail_btn.png" id="4_gc38w"]
+[ext_resource type="Texture2D" uid="uid://bfx27ixrohdkw" path="res://assest/hall/logout_btn.png" id="5_2vs8y"]
+[ext_resource type="Texture2D" uid="uid://cgb7pmeyrmyph" path="res://assest/hall/setting_btn.png" id="6_g8q5o"]
+[ext_resource type="Texture2D" uid="uid://dm1x0a7clio7c" path="res://assest/activity/activity_bg_1.png" id="7_yynet"]
+[ext_resource type="Script" path="res://script/hall/HBoxContainer.gd" id="8_3yinv"]
+[ext_resource type="Texture2D" uid="uid://bmo1hsje3w7na" path="res://assest/activity/activity_bg_2.png" id="8_yije2"]
+[ext_resource type="Texture2D" uid="uid://bh3yqjxad60g3" path="res://assest/activity/activity_bg_3.png" id="9_ep7a8"]
+[ext_resource type="Texture2D" uid="uid://cf0bu23f60hjq" path="res://assest/button/challenge_btn.png" id="12_esigw"]
+[ext_resource type="FontFile" uid="uid://bglup5px3oxiu" path="res://fonts/NotoSansTC-Bold.ttf" id="13_ie1e6"]
+
+[sub_resource type="Animation" id="Animation_ar83f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Activity_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Activity_1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Activity_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(308, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Activity_2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer/Activity_3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(750, 50)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer/Activity_3:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HBoxContainer/Activity_3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HBoxContainer/Activity_2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HBoxContainer/Activity_1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_533w8"]
+resource_name = "MoveAndScale"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Activity_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 50), Vector2(308, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Activity_1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Activity_2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(308, 0), Vector2(750, 50)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Activity_2:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.5, 0.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer/Activity_3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 50), Vector2(1050, 50), Vector2(0, 50), Vector2(20, 50)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer/Activity_3:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HBoxContainer/Activity_3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_sw6qv"]
+resource_name = "MoveAndScale_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Activity_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(308, 0), Vector2(750, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Activity_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 50), Vector2(1050, 50), Vector2(0, 50), Vector2(20, 50)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Activity_3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 50), Vector2(308, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Activity_1:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.5, 0.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer/Activity_2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer/Activity_3:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HBoxContainer/Activity_2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_j7bky"]
+resource_name = "MoveAndScale_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/Activity_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(750, 50), Vector2(1050, 50), Vector2(0, 50), Vector2(20, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HBoxContainer/Activity_1:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HBoxContainer/Activity_1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HBoxContainer/Activity_2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 50), Vector2(308, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HBoxContainer/Activity_2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HBoxContainer/Activity_3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(308, 0), Vector2(750, 50)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("HBoxContainer/Activity_3:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dxfjd"]
+_data = {
+"MoveAndScale_1": SubResource("Animation_533w8"),
+"MoveAndScale_2": SubResource("Animation_sw6qv"),
+"MoveAndScale_3": SubResource("Animation_j7bky"),
+"RESET": SubResource("Animation_ar83f")
+}
+
+[node name="HallPage" type="Node2D"]
+script = ExtResource("1_en4ui")
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(0.498298, 0.5)
+texture = ExtResource("1_dhkur")
+centered = false
+
+[node name="PersonalBtn" type="TextureButton" parent="."]
+offset_left = 21.0
+offset_top = 20.0
+offset_right = 285.0
+offset_bottom = 117.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_gnqaw")
+
+[node name="HallBtn" type="TextureButton" parent="."]
+offset_left = 176.0
+offset_top = 20.0
+offset_right = 440.0
+offset_bottom = 117.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_jm50t")
+
+[node name="PersonalBtn2" type="TextureButton" parent="."]
+offset_left = 331.0
+offset_top = 20.0
+offset_right = 595.0
+offset_bottom = 117.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_gnqaw")
+
+[node name="MailBtn" type="TextureButton" parent="."]
+offset_left = 896.0
+offset_top = 20.0
+offset_right = 992.0
+offset_bottom = 116.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_gc38w")
+
+[node name="LogoutBtn" type="TextureButton" parent="."]
+offset_left = 962.0
+offset_top = 20.0
+offset_right = 1058.0
+offset_bottom = 116.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_2vs8y")
+
+[node name="SettingBtn" type="TextureButton" parent="."]
+offset_left = 962.0
+offset_top = 82.0
+offset_right = 1058.0
+offset_bottom = 178.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("6_g8q5o")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_top = 190.0
+offset_right = 1025.0
+offset_bottom = 449.0
+script = ExtResource("8_3yinv")
+
+[node name="Activity_1" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(20, 50)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_yynet")
+centered = false
+
+[node name="Activity_2" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(308, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_yije2")
+centered = false
+
+[node name="Activity_3" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(750, 50)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_ep7a8")
+centered = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dxfjd")
+}
+
+[node name="AloneBtn" type="TextureButton" parent="."]
+offset_left = 346.0
+offset_top = 483.0
+offset_right = 501.0
+offset_bottom = 562.0
+texture_normal = ExtResource("12_esigw")
+
+[node name="AloneLabel" type="Label" parent="AloneBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_ie1e6")
+theme_override_font_sizes/font_size = 24
+text = "個人挑戰"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeamBtn" type="TextureButton" parent="."]
+offset_left = 523.0
+offset_top = 483.0
+offset_right = 678.0
+offset_bottom = 562.0
+texture_normal = ExtResource("12_esigw")
+
+[node name="TeamLabel" type="Label" parent="TeamBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_ie1e6")
+theme_override_font_sizes/font_size = 24
+text = "隊伍挑戰"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,133 @@
+[gd_scene load_steps=6 format=3 uid="uid://c67k2llbgw4b5"]
+
+[ext_resource type="Texture2D" uid="uid://bgi4vfkhc3lav" path="res://assest/background/Index_bg.png" id="1_8nedh"]
+[ext_resource type="Script" path="res://script/login/loginPage.gd" id="1_dq0wq"]
+[ext_resource type="Texture2D" uid="uid://bu6h8goibx6sj" path="res://assest/button/normal_btn_bg.png" id="2_wo3bs"]
+[ext_resource type="FontFile" uid="uid://bglup5px3oxiu" path="res://fonts/NotoSansTC-Bold.ttf" id="3_b2lqe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebra7"]
+texture = ExtResource("2_wo3bs")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[node name="LoginPage" type="Node2D"]
+script = ExtResource("1_dq0wq")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(0.497812, 0.500864)
+texture = ExtResource("1_8nedh")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="AccountBg" type="TextureRect" parent="."]
+offset_left = 336.0
+offset_top = 425.0
+offset_right = 669.0
+offset_bottom = 521.0
+scale = Vector2(0.3, 0.5)
+texture = ExtResource("2_wo3bs")
+
+[node name="AccountLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 338.0
+offset_top = 426.0
+offset_right = 436.0
+offset_bottom = 473.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2lqe")
+theme_override_font_sizes/font_size = 24
+text = "帳號"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AccountInput" type="TextEdit" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 495.0
+offset_top = 425.0
+offset_right = 941.0
+offset_bottom = 521.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_b2lqe")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebra7")
+
+[node name="PasswordBg" type="TextureRect" parent="."]
+offset_left = 338.0
+offset_top = 506.0
+offset_right = 671.0
+offset_bottom = 602.0
+scale = Vector2(0.3, 0.5)
+texture = ExtResource("2_wo3bs")
+
+[node name="PasswordLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 338.0
+offset_top = 506.0
+offset_right = 436.0
+offset_bottom = 555.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2lqe")
+theme_override_font_sizes/font_size = 24
+text = "密碼"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PasswordInput" type="TextEdit" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 495.0
+offset_top = 506.0
+offset_right = 941.0
+offset_bottom = 602.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_b2lqe")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_ebra7")
+
+[node name="SubmitBtn" type="TextureButton" parent="."]
+offset_left = 885.0
+offset_top = 506.0
+offset_right = 1218.0
+offset_bottom = 602.0
+scale = Vector2(0.3, 0.5)
+texture_normal = ExtResource("2_wo3bs")
+
+[node name="SubmitLabel" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 885.0
+offset_top = 506.0
+offset_right = 985.0
+offset_bottom = 554.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_b2lqe")
+theme_override_font_sizes/font_size = 24
+text = "送出"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1024.0
+offset_bottom = 580.0
+color = Color(0, 0, 0, 1)

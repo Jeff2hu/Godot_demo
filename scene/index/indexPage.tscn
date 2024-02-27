@@ -1,0 +1,122 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwrmqhyuwwc1a"]
+
+[ext_resource type="Script" path="res://script/index/indexPage.gd" id="1_ctnat"]
+[ext_resource type="Texture2D" uid="uid://bgi4vfkhc3lav" path="res://assest/background/Index_bg.png" id="2_dhv5w"]
+[ext_resource type="Texture2D" uid="uid://bu6h8goibx6sj" path="res://assest/button/normal_btn_bg.png" id="3_vf5t8"]
+[ext_resource type="FontFile" uid="uid://bglup5px3oxiu" path="res://fonts/NotoSansTC-Bold.ttf" id="4_uemva"]
+[ext_resource type="Texture2D" uid="uid://8o1sxlhw5wl5" path="res://assest/button/link_btn.png" id="5_yf7lm"]
+[ext_resource type="Texture2D" uid="uid://dxv2jafb2jykb" path="res://assest/button/member_btn.png" id="6_dghcl"]
+
+[node name="IndexPage" type="Node2D"]
+script = ExtResource("1_ctnat")
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(0.497812, 0.5)
+texture = ExtResource("2_dhv5w")
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 431.0
+offset_top = 424.0
+offset_right = 764.0
+offset_bottom = 674.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="LoginBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_vf5t8")
+metadata/_edit_group_ = true
+
+[node name="LoginLabel" type="Label" parent="VBoxContainer/LoginBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uemva")
+theme_override_font_sizes/font_size = 44
+text = "登入"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreateBtn" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture_normal = ExtResource("3_vf5t8")
+metadata/_edit_group_ = true
+
+[node name="CreateLabel" type="Label" parent="VBoxContainer/CreateBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uemva")
+theme_override_font_sizes/font_size = 44
+text = "創建帳號"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 541.0
+offset_right = 1986.0
+offset_bottom = 615.0
+scale = Vector2(0.5, 0.5)
+size_flags_vertical = 4
+
+[node name="LinkToEduBtn" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_yf7lm")
+metadata/_edit_group_ = true
+
+[node name="LinkToEduLabel" type="Label" parent="HBoxContainer/LinkToEduBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_right = 1.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uemva")
+theme_override_font_sizes/font_size = 30
+text = "因  才  網"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinkToMemberBtn" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("6_dghcl")
+metadata/_edit_group_ = true
+
+[node name="LinkToMemberLabel" type="Label" parent="HBoxContainer/LinkToMemberBtn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_right = 1.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_uemva")
+theme_override_font_sizes/font_size = 30
+text = "製 作 人 員"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1024.0
+offset_bottom = 579.0
+color = Color(0, 0, 0, 1)
